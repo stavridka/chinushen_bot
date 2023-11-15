@@ -1,7 +1,4 @@
 #!/bin/python3
-import os
-import pip
-pip.main(['install', 'pytelegrambotapi'])
 import config
 import telebot
 import sqlite3
