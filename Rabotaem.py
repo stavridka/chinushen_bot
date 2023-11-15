@@ -1,6 +1,4 @@
 # - *- coding: utf- 8 - *-
-import pip
-
 import config
 import telebot
 import sqlite3
