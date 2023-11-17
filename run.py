@@ -43,7 +43,7 @@ def reg_user(message):
             db.commit()        
     return menu(message)  
 
-@bot.message_handler(commands = ['send'])
+'''@bot.message_handler(commands = ['send'])
 def send(message):
     with sqlite3.connect('memories.db') as db:
         cursor = db.cursor()
@@ -62,7 +62,7 @@ Oh, ho hooou! Chinushen теперь на
 Получите 30🩻 пыли в качестве компенсации
 """)
             except:
-                pass
+                pass'''
 
 
 
