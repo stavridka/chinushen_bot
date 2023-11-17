@@ -43,11 +43,12 @@ def reg_user(message):
             db.commit()        
     return menu(message)  
 
-'''@bot.message_handler(commands = ['send'])
+@bot.message_handler(commands = ['send'])
 def send(message):
     with sqlite3.connect('memories.db') as db:
         cursor = db.cursor()
         inf = list(cursor.execute("""SELECT id FROM data"""))
+        print(inf)
         bonus = 30
         for el in inf:
             cursor.execute(f"UPDATE data SET coins = coins + {bonus} WHERE id = ?", [el[0]])
@@ -57,8 +58,8 @@ def send(message):
 Oh, ho hooou! Chinushen теперь на 
 облачном сервере, что обеспечит его
 стабильную работу и быстродействие!
-Получите 20🩻 пыли в качестве компенсации
-""")'''
+Получите 30🩻 пыли в качестве компенсации
+""")
             
 
 
