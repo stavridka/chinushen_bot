@@ -39,7 +39,7 @@ def reg_user(message):
         info = cursor.execute('SELECT * FROM swimes WHERE id=?', [message.chat.id ])
         if info.fetchone() is None:         
 
-            cursor.execute('''INSERT INTO swimes VALUES (?,?,?,?,?,?);''', (u_id, u_num, u_popit,u_wins,statu, coins ))
+            cursor.execute('''INSERT INTO swimes VALUES (?,?,?,?,?,?);''', (u_id, u_num, u_popit,u_wins,statu))
             db.commit()        
     return menu(message)  
 
