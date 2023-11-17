@@ -50,7 +50,7 @@ def send(message):
         inf = list(cursor.execute("""SELECT id FROM data"""))
         bonus = 30
         for el in inf:
-            cursor.execute(f"UPDATE data SET coins = coins + {bonus} WHERE id = ?", (el[0]))
+            cursor.execute(f"UPDATE data SET coins = coins + {bonus} WHERE id = ?", [el[0]])
             db.commit()
             bot.send_message(el[0], """
 🔹Update v1.0.1
