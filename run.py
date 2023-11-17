@@ -223,5 +223,5 @@ def vivod(message):
                 bot.send_message(message.chat.id, f'{str(bull)} бык(а) и {str(cow)} коров(а)' )       
                 bot.register_next_step_handler(message, vivod)          
 
-keep_alive()    
+ 
 bot.polling()
