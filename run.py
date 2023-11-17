@@ -51,16 +51,18 @@ def send(message):
         print(inf)
         bonus = 30
         for el in inf:
-            cursor.execute(f"UPDATE data SET coins = coins + {bonus} WHERE id = ?", [el[0]])
-            db.commit()
-            bot.send_message(el[0], """
+            try:
+                cursor.execute(f"UPDATE data SET coins = coins + {bonus} WHERE id = ?", [el[0]])
+                db.commit()
+                bot.send_message(el[0], """
 🔹Update v1.0.1
 Oh, ho hooou! Chinushen теперь на 
 облачном сервере, что обеспечит его
 стабильную работу и быстродействие!
 Получите 30🩻 пыли в качестве компенсации
 """)
-            
+            except:
+                pass
 
 
 
